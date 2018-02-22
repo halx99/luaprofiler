@@ -8,11 +8,12 @@
 luaprofiler.h:
     Must be included by your main module, in order to profile Lua programs
 *****************************************************************************/
+#pragma once
 #ifdef __cplusplus
 extern "C" {
 #endif
-  
-    void init_profiler(void *);
+    struct lua_State;
+    void luaopen_profiler(lua_State* L);
     
 #ifdef __cplusplus
 }
